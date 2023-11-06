@@ -18,6 +18,7 @@ def setup():
   url = "https://ondemand.us-west-1.saucelabs.com:443/wd/hub"
   driver = webdriver.Remote(command_executor=url, options=options)
   driver.get("https://www.python.org")
+  print(driver.title)
   search_bar = driver.find_element(By.NAME, "q")
   search_bar.clear()
   search_bar.send_keys("getting started with python")
