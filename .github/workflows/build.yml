@@ -1,6 +1,13 @@
 name: demo-saucelab-python
 on: 
-  - push
+  push:
+    branches: 
+      - 'develop'
+      - 'release/*'
+  pull_request: 
+    types: 
+      - closed
+
 env: 
   SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
   SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
