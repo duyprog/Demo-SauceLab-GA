@@ -1,15 +1,19 @@
 name: demo-saucelab-python
 on: 
   - push
+env: 
+  SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
+  SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
+
 jobs: 
   python-test: 
     name: Test
     runs-on: ubuntu-latest
-
     steps: 
       - uses: actions/checkout@v3
       - name: Setup python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
-          
+      - name: Run saucelab test 
+        run: python python-test.py
