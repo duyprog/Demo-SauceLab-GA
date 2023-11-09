@@ -6,10 +6,12 @@ from selenium.webdriver.support import expected_conditions as EC
 
 caps = {}
 caps['platformName'] = 'iOS'
-caps['appium:deviceName'] = 'iPhone 12'
-caps['appium:platformVersion'] = '14.2'
+caps['appium:app'] = 'SampleApp'
+caps['appium:deviceName'] = 'iPhone 12 Pro Max Simulator'
+caps['appium:platformVersion'] = '14.3'
 caps['appium:automationName'] = 'XCUITest'
 caps['sauce:options'] = {}
+caps['sauce:options']['appiumVersion'] = '2.0.0'
 caps['sauce:options']['username'] = os.environ["SAUCE_USERNAME"]
 caps['sauce:options']['accessKey'] = os.environ["SAUCE_ACCESS_KEY"]
 caps['sauce:options']['build'] = 'test'
