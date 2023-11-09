@@ -1,10 +1,8 @@
 name: demo-saucelab-python
 on: 
-  pull_request:
+  push: 
     branches: 
-      - 'master' 
-    types: 
-      - closed
+      - feat/appmium
 
 env: 
   SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
