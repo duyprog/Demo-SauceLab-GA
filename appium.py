@@ -1,4 +1,3 @@
-import pytest
 import os
 from appium import webdriver
 from appium.webdriver.common.mobileby import MobileBy
