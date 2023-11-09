@@ -21,4 +21,4 @@ jobs:
       - name: Install dependency
         run: pip install -r requirements.txt
       - name: Run saucelab test 
-        run: python appium.py
+        run: python appium-test.py
